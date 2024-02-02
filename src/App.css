@@ -1,16 +1,250 @@
-.App {
-  text-align: center;
+
+.property-description {
+  text-align: left;
+  margin-bottom: 15px; /* Adjust spacing between descriptions */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.property-description h3 {
+  margin-bottom: 8px; /* Margin for the heading */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.web-view {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.web-view::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(101, 96, 96, 0.89), #262637);
+  background-size: 100% 100%;
+  min-height: 100vh;
+  padding-bottom: 40px; 
+  filter: blur(3px); /* Adjust the blur value as needed */
+  z-index: -1;
+}
+
+.property-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgb(187, 183, 183), #262637);
+  background-size: 100% 100%;
+  min-height: 100vh;
+  padding-bottom: 40px; 
+
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 1050px; 
+  overflow-y: auto; /* Enable vertical scrolling */
+  
+  
+}
+
+.property-card-list img {
+  width: 80px; /* Decrease image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Adjusting image margin */
+}
+
+.favorite-property {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Adjusting margin between cards */
+  
+  
+  
+}
+
+.favorites-tab {
+  width: calc(33.33% - 20px);
+  background-color: #f4f4f4;
+  border-radius: 18px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-transform: capitalize;
+}
+
+.favorites-tab h2{
+  margin-left: 15px;
+  margin-bottom: 30px;
+  
+}
+
+
+.separator-line {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.property-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.back-icon {
+  margin-right: 5px;
+}
+
+
+.property-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.property-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.property-description h3 {
+  margin-bottom: 8px; /* Margin for the heading */
+}
+
+.property-description p {
+  margin-left: 20px; /* Indent property details */
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap between images */
+}
+
+.property-image {
+  width: 200px; /* Set the initial width of the images */
+  height: auto;
+  transition: transform 0.6s ease; /* Add transition for smooth zoom effect */
+}
+
+
+.property-heading h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.property-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.special-bedrooms {
+  color: #808080;
+  font-style: italic;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+/* Alignment and visual connection */
+.property-card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background-color: #eff3d3;
+  border-radius: 18px;
+}
+
+.property-card-list h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.property-card-list p {
+  font-size: 14px;
+}
+
+/* Balance and Unity */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #010101;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.property-detail {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.property-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.property-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.property-image:hover {
+  transform: scale(1.5); /* Set the scale factor for zoom effect */
+}
+
+.property-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+ 
+}
+
+.white-box {
+  background-color: rgb(235, 244, 182);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  border-bottom: red;
+}
+
+.back-text {
+  margin-right: 50px; /* Adjust the space between icon and text */
+  margin-left: 0px;
 }
 
 .App-header {
@@ -24,15 +258,203 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  background-image:linear-gradient(to right, rgb(86, 93, 118),rgb(168, 140, 239)); /* Changing background color to dark gray */
+  color: white; /* Changing text color to white */
+  padding: 10px;
+  border-radius: 0px;
+}
+nav h2 {
+  text-align: center;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Dropdown styles */
+select {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styles */
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(83, 65, 240);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* Background of container of search box */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  background-color: #262637;
+}
+
+
+.green-text {
+  color: #00deb6; /* Style for green text */
+  font-size: 30px;
+}
+
+.white-text {
+  color: rgb(255, 255, 255); /* Style for white text */
+  font-weight: bold; /* Make the text bold */
+}
+.search-card-box input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 10px; /* Increase top margin */
+  margin-bottom: 10px; /* Increase bottom margin */
+  margin-left: 5px; /* Add left margin for spacing */
+  margin-right: 5px; /* Add right margin for spacing */
+}
+.search-card {
+  margin-top: 20px;
+}
+
+
+form {
+  text-align: center;
+  margin: 10px 0;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+
+.search-card-box input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Search bar styles */
+.search-card-box {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-card form {
+  display: flex;
+  align-items: center;
+}
+
+.search-card input[type="text"],
+.search-card input[type="number"],
+.search-card select {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Apply similar styles to the min and max price input fields */
+.search-card input[type="number"] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+footer {
+  background-color: #4d4d4d;
+  padding: 10px;
+  text-align: center;
+  color: #ccc;
+
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.property-cards {
+ 
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 50px; /* Add margin at the top of property cards */
+}
+
+
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Add some space below the header */
+}
+
+.clear-favorites-btn {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: rgb(241, 10, 10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.clear-favorites-btn i {
+  margin-right: 5px;
+  margin-bottom: 50px;
+}
+
+.property-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-image {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.property-details {
+  color: #333;
+  text-align: left;
+}
+
+.property-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.property-price,
+.property-location {
+  margin-bottom: 5px;
+  font-size: 0.9em;
 }
